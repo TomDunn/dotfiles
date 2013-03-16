@@ -56,6 +56,7 @@ endif
 " Tom Dunn's custom shizzz
 
 " the pathogen plugin
+filetype plugin indent on
 call pathogen#infect()
 
 " syntastic shit
