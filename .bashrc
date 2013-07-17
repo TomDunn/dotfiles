@@ -123,17 +123,15 @@ fi
 
 # secure copy
 function scpp() {
-    DEST="$1.tar.gz"
-    tar czvf "$DEST" "$1"
+    DEST="$1.gz"
+    gzip "$1" -c > "$DEST"
     scp "$DEST" files@tomdunn.net:~/files;
-    rm "$DEST"
 }
 
 function gscpp() {
     SOURCE="files@tomdunn.net:~/files/$1.tar.gz"
     scp "$SOURCE" .
-    tar xzvf "$1.tar.gz"
-    rm "$1.tar.gz"
+    gunzip "$1.gz"
 }
 
 ### Added by the Heroku Toolbelt
