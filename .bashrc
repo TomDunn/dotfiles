@@ -1,5 +1,4 @@
-pp=/home/tom/Programming/Python/Django/483
-pn=/home/tom/Programming/Node/Noggler
+pp=/home/tom/Programming/Python/RedditGraph
 
 alias py="python"
 alias nn=$pp
@@ -132,6 +131,19 @@ function gscpp() {
     SOURCE="files@tomdunn.net:~/files/$1.bz2"
     scp "$SOURCE" .
     bunzip2 "$1.bz2"
+}
+
+function start_ssh_tunnel() {
+    AUTOSSH_PORT=20000
+    AUTOSSH_DEBUG=yes
+    export AUTOSSH_DEBUG
+    export AUTOSSH_PORT
+
+    autossh -2 -fN -M 20000 -L 5433:localhost:5432 tunnels@tomdunn.net -i ~/.ssh/tunnel_rsa
+}
+
+function kill_ssh_tunnel() {
+    killall autossh
 }
 
 function server() {
