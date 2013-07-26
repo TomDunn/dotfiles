@@ -3,4 +3,4 @@ AUTOSSH_DEBUG=yes
 export AUTOSSH_DEBUG
 export AUTOSSH_PORT
 
-autossh -2 -fN -L 5433:localhost:5432 -L 8888:localhost:80 files@tomdunn.net
+autossh -2 -fN -L 5433:localhost:5432 -L 8888:localhost:80 tunnels@tomdunn.net -i ~/.ssh/tunnel_rsa
