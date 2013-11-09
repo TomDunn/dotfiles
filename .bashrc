@@ -2,6 +2,11 @@ pp=/home/tom/Programming/Python/RedditGraph
 
 alias py="python"
 alias nn=$pp
+alias gs="git status"
+alias gl="git log"
+alias gc="git checkout"
+alias gd="git diff"
+alias gpr="git pull --rebase"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
