@@ -1,5 +1,4 @@
-pp=/home/tom/Programming/Python/RedditGraph
-
+alias ap="ansible-playbook"
 alias py="python"
 alias nn=$pp
 alias gs="git status"
@@ -7,6 +6,7 @@ alias gl="git log"
 alias gc="git checkout"
 alias gd="git diff"
 alias gpr="git pull --rebase"
+alias hgrp="history | grep $1"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -155,7 +155,7 @@ function server() {
     local port="${1:-8000}"
     local url="http://localhost:${port}/"
     echo url
-    google-chrome $url
+    #google-chrome $url
     # Set the default Content-Type to `text/plain` instead of `application/octet-stream`
     # And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
     python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
