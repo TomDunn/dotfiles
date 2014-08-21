@@ -161,4 +161,6 @@ endfunction
 command! -bang -complete=buffer -nargs=? Bclose call s:Bclose('<bang>', '<args>')
 "nnoremap <silent> <Leader>bd :Bclose<CR>
 noremap <Leader>bd :Bclose<CR>
+noremap <Leader>w :w<CR>
+noremap <Leader>q :q<CR>
 nmap <silent> <F3> :NERDTreeToggle<CR>
