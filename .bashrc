@@ -4,7 +4,7 @@ alias nn=$pp
 alias gs="git status"
 alias gl="git log"
 alias gc="git checkout"
-alias gd="git diff"
+alias gd="git diff --color"
 alias gpr="git pull --rebase"
 alias hgrp="history | grep $1"
 
