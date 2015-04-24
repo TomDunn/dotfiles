@@ -70,6 +70,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 colorscheme elflord 
+set number
 
 " custom settings from http://statico.github.com/vim.html
 nmap j gj

@@ -7,6 +7,7 @@ alias gc="git checkout"
 alias gd="git diff --color"
 alias gpr="git pull --rebase"
 alias hgrp="history | grep $1"
+alias s3cmd="/home/tom/software/s3cmd-master/s3cmd"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
