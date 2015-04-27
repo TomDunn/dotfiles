@@ -30,12 +30,14 @@ alias gc="git checkout"
 alias gd="git diff --color"
 alias gpr="git pull --rebase"
 
+alias node='nodejs'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
 bindkey "^R" history-incremental-search-backward
-bindkey "^N" down-line-or-history
-bindkey "^P" up-line-or-history
+bindkey "^J" down-line-or-history
+bindkey "^K" up-line-or-history
 
