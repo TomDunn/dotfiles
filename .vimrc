@@ -64,12 +64,13 @@ call pathogen#infect()
 " syntastic shit
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{fugitive#statusline()}
 set statusline+=%*
 
 set expandtab
 set tabstop=4
 set shiftwidth=4
-colorscheme elflord 
+colorscheme evening
 set number
 
 " custom settings from http://statico.github.com/vim.html
