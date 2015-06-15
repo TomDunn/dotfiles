@@ -70,7 +70,7 @@ set statusline+=%*
 set expandtab
 set tabstop=4
 set shiftwidth=4
-colorscheme evening
+colorscheme torte
 set number
 
 " custom settings from http://statico.github.com/vim.html
