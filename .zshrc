@@ -41,3 +41,5 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^J" down-line-or-history
 bindkey "^K" up-line-or-history
 
+# tmux
+alias tmux="TERM=screen-256color tmux -2"
