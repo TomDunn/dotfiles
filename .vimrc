@@ -62,10 +62,9 @@ filetype plugin indent on
 call pathogen#infect()
 
 " syntastic shit
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%{fugitive#statusline()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 set expandtab
 set tabstop=4
