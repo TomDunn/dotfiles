@@ -30,8 +30,6 @@ alias gc="git checkout"
 alias gd="git diff --color"
 alias gpr="git pull --rebase"
 
-alias node='nodejs'
-
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -43,3 +41,9 @@ bindkey "^K" up-line-or-history
 
 # tmux
 alias tmux="TERM=screen-256color tmux -2"
+
+# NodeJS via NVM
+export NVM_DIR="/home/tom/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm use stable

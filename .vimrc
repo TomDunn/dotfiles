@@ -88,6 +88,9 @@ nmap <C-e> :e#<CR>
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
+" Markdown syntax for .md files
+autocmd BufNewFile, BufReadPost *.md set filetype=markdown
+
 " close buffer without closing windows
 " Delete buffer while keeping window layout (don't close buffer's windows).
 " Version 2008-11-18 from http://vim.wikia.com/wiki/VimTip165
