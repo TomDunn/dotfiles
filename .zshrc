@@ -35,6 +35,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# vlc gets stuck sometimes
+alias killvlc='kill -9 `pgrep -f /usr/bin/vlc`'
+
 bindkey "^R" history-incremental-search-backward
 bindkey "^J" down-line-or-history
 bindkey "^K" up-line-or-history
