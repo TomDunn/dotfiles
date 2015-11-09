@@ -16,7 +16,7 @@ ln -s $ROOT_DIR/.vimrc     $HOME/.vimrc
 ln -s $ROOT_DIR/.zshrc     $HOME/.zshrc
 
 # install other things i use 
-sudo apt-get install vim curl zsh
+sudo apt-get install vim curl zsh tmux
 bash ./vim-plugins.sh
 
 # SSH keys
@@ -29,4 +29,14 @@ if [ ! -f $HOME/.ssh/id_rsa.pub ]; then
     cat $HOME/.ssh/id_rsa.pub
 else
     echo "SSH keys exist, skipping generation step"
+fi
+
+echo "Do you want to set your shell to zsh? (y/n):"
+read choice
+
+if [$choice = "y"]; then
+    echo "Setting shell as requested"
+    chsh -s /usr/bin/zsh $USER
+else
+    echo "Not setting shell to zsh"
 fi
