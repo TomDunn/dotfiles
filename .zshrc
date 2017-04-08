@@ -43,8 +43,7 @@ bindkey "^J" down-line-or-history
 bindkey "^K" up-line-or-history
 
 # tmux
-alias tmux="TERM=screen-256color tmux -2"
-
+alias tmux="tmux -2"
 # NodeJS via NVM
 export NVM_DIR="/home/tom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
