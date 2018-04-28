@@ -39,12 +39,12 @@ endif
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-"set showcmd		" Show (partial) command in status line.
-"set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
+set showcmd		" Show (partial) command in status line.
+set showmatch		" Show matching brackets.
+set ignorecase		" Do case insensitive matching
 "set smartcase		" Do smart case matching
-"set incsearch		" Incremental search
-"set autowrite		" Automatically save before commands like :next and :make
+set incsearch		" Incremental search
+set autowrite		" Automatically save before commands like :next and :make
 "set hidden             " Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
@@ -90,6 +90,15 @@ nmap <C-p> :bprev<CR>
 
 " Markdown syntax for .md files
 autocmd BufNewFile, BufReadPost *.md set filetype=markdown
+
+" tabstop 2 for JSON and HTML files
+autocmd FileType json setlocal tabstop=2 shiftwidth=2
+autocmd FileType html setlocal tabstop=2 shiftwidth=2
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2
+autocmd FileType yml setlocal tabstop=2 shiftwidth=2
+autocmd FileType ts setlocal tabstop=2 shiftwidth=2
+autocmd FileType typescript setlocal tabstop=2 shiftwidth=2
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 
 " close buffer without closing windows
 " Delete buffer while keeping window layout (don't close buffer's windows).
@@ -167,4 +176,9 @@ command! -bang -complete=buffer -nargs=? Bclose call s:Bclose('<bang>', '<args>'
 noremap <Leader>bd :Bclose<CR>
 noremap <Leader>w :w<CR>
 noremap <Leader>q :q<CR>
+noremap <Leader>n :bnext<CR>
+noremap <Leader>p :bprev<CR>
+noremap <Leader>ww <C-W>W
 nmap <silent> <F3> :NERDTreeToggle<CR>
+map <Leader>l $
+map <Leader>h ^

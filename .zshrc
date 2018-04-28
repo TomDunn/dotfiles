@@ -48,4 +48,3 @@ alias tmux="tmux -2"
 export NVM_DIR="/home/tom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm use stable
